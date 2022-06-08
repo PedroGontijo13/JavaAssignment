@@ -1,4 +1,6 @@
 module ca.ciccc.wmad202 {
+    requires ca.ciccc.wmad202.lecturer;
+    requires ca.ciccc.wmad202.assignment1;
     requires ca.ciccc.wmad202.assignment2;
     requires ca.ciccc.wmad202.assignment3;
     requires ca.ciccc.wmad202.assignment4;
