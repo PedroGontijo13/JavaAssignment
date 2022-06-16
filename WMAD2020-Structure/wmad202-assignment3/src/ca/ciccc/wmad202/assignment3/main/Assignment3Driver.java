@@ -5,6 +5,7 @@ import ca.ciccc.wmad202.assignment3.problem2.Problem2;
 import ca.ciccc.wmad202.assignment3.problem3.Problem3;
 import ca.ciccc.wmad202.assignment3.problem4.Problem4;
 import ca.ciccc.wmad202.assignment3.problem5.Problem5;
+import ca.ciccc.wmad202.assignment3.problem6.Problem6;
 
 public class Assignment3Driver {
     public static void run() {
@@ -16,7 +17,9 @@ public class Assignment3Driver {
         //question3.TakeNumber();
         //Problem4 question4 = new Problem4();
         //question4.TakeNumbers();
-        Problem5 question5 = new Problem5();
-        question5.TakeNumbers();
+        //Problem5 question5 = new Problem5();
+        //question5.TakeNumbers();
+        Problem6 question6 = new Problem6();
+        question6.TakeNumbers();
     }
 }
