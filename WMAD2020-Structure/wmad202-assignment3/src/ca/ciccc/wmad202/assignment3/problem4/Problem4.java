@@ -27,6 +27,11 @@ public class Problem4 {
         for(int i = 0; i < n.length; i++) {
             System.out.println("Digit one number:");
             n[i] = in.nextInt();
+            if(n[i] < 1 || n[i] > 100) {
+                System.out.println("Need to be greater or equal 1 and smaller than 100");
+                System.out.println("Digit again:");
+                n[i] = in.nextInt();
+            }
         }
         if(Repeated(n) == 0) {
             System.out.println("DONT HAVE ANY REPEATED NUMBER!");
