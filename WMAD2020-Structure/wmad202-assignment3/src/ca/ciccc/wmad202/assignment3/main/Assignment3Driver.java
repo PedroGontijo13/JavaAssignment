@@ -1,10 +1,10 @@
 package ca.ciccc.wmad202.assignment3.main;
 
-import ca.ciccc.wmad202.assignment3.question2.Question2;
+import ca.ciccc.wmad202.assignment3.problem1.Problem1;
 
 public class Assignment3Driver {
     public static void run() {
-        Question2 question2 = new Question2();
-        System.out.println("circle area : "+ question2.circleArea(5,13));
+        Problem1 question1 = new Problem1();
+        question1.TakeNumber();
     }
 }
