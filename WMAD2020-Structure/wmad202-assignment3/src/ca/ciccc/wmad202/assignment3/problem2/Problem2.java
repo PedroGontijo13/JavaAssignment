@@ -1,8 +1,8 @@
-package ca.ciccc.wmad202.assignment3.problem1;
+package ca.ciccc.wmad202.assignment3.problem2;
 
 import java.util.Scanner;
 
-public class Problem1 {
+public class Problem2 {
     /**Design and implement a function which receives a positive integer as its input parameter
      and checks whether the number is a prime number or not. If it is a prime number, the
      method returns true and if not the method will return false. */
@@ -18,6 +18,18 @@ public class Problem1 {
         }
         return true;
     }
+    public static int NextPrime(int n) {
+        int result = 0;
+        for(int i = n + 1; i <= n * 2; i++) {
+            if(PrimeNumber(i)) {
+                result = i;
+                break;
+            } else {
+                result = 0;
+            }
+        }
+        return result;
+    }
     //Take the input number
     public static void TakeNumber() {
         Scanner in = new Scanner(System.in);
@@ -25,8 +37,10 @@ public class Problem1 {
         int n = in.nextInt();
         if(PrimeNumber(n)) {
             System.out.println("THE NUMBER IS PRIME!");
+            System.out.println("THE NEXT PRIME NUMBER IS:" + NextPrime(n));
         } else {
             System.out.println("THE NUMBER ISNT PRIME!");
+            System.out.println("THE NEXT PRIME NUMBER IS:" + NextPrime(n));
         }
     }
 }
