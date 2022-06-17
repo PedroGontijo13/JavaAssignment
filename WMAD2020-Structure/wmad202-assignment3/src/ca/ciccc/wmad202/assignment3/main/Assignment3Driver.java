@@ -28,7 +28,7 @@ public class Assignment3Driver {
         //question7.TakeNumbers();
         //Problem8 question8 = new Problem8();
         //question8.TakeNumber();
-        Problem9 question9 = new Problem9();
-        question9.TakeNumbers();
+        //Problem9 question9 = new Problem9();
+        //question9.TakeNumbers();
     }
 }
