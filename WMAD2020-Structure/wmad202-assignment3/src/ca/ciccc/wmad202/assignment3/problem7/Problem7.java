@@ -18,10 +18,16 @@ public class Problem7 {
         }
         return x;
     }
-    public static void TakeNumbers(){
-        System.out.println("Question6");
+    public static void Test(){
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> numberList = new ArrayList<>();
+        numberList.add(1);
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(2);
+        numberList.add(4);
+        int searchNumber = 4;
+        /*
         System.out.println("Please enter the number: ");
         int number1 = scanner.nextInt();
         numberList.add(number1);
@@ -35,7 +41,7 @@ public class Problem7 {
         }
 
         System.out.println("Please enter one number to find: ");
-        int searchNumber = scanner.nextInt();
+        int searchNumber = scanner.nextInt(); */
 
         if(SearchNumber(numberList, searchNumber) == -1) {
             System.out.println("DIDNT FIND!");

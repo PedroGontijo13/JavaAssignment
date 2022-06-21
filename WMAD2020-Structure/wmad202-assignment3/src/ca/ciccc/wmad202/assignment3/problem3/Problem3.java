@@ -39,6 +39,14 @@ public class Problem3 {
         }
 
         }
+
+        public static void Test() {
+            doingShape(5, "SHAPE1");
+            doingShape(6, "SHAPE2");
+            doingShape(7, "SHAPE3");
+        }
+
+        /*
     public static void TakeNumber() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digit one number:");
@@ -47,5 +55,5 @@ public class Problem3 {
         System.out.println("Enter the SHAPE:");
         String format = myObj.nextLine();
         doingShape(n, format);
-    }
+    } */
 }

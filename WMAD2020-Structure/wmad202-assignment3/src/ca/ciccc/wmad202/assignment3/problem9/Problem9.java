@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Problem9 {
-    public static void TakeNumbers() {
-        System.out.println("Question6");
-        Scanner scanner = new Scanner(System.in);
+    public static void Test() {
         ArrayList<Integer> numberList = new ArrayList<>();
+        
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the number: ");
         int number1 = scanner.nextInt();
         numberList.add(number1);

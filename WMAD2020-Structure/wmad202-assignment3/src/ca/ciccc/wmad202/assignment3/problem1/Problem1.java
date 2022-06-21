@@ -19,10 +19,25 @@ public class Problem1 {
         return true;
     }
     //Take the input number
+    /*
     public static void TakeNumber() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digit one number:");
         int n = in.nextInt();
+        if(PrimeNumber(n)) {
+            System.out.println("THE NUMBER IS PRIME!");
+        } else {
+            System.out.println("THE NUMBER ISNT PRIME!");
+        }
+    }*/
+    public static void Test() {
+        callFunction(5);
+        callFunction(7);
+        callFunction(8);
+        callFunction(9);
+        callFunction(121);
+    }
+    public static void callFunction(int n) {
         if(PrimeNumber(n)) {
             System.out.println("THE NUMBER IS PRIME!");
         } else {

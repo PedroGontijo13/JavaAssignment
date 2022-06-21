@@ -19,13 +19,19 @@ public class Problem8 {
         System.out.println(arrayL);
         return arrayL;
     }
+    public static void Test() {
+        CallFunction(45, 6);
+        CallFunction(50, 10);
+        CallFunction(73, 15);
+    }
     //Take the input number
-    public static void TakeNumber() {
+    public static void CallFunction(int topLimit, int number) {
+        /*
         Scanner in = new Scanner(System.in);
         System.out.println("Digit one number:");
         int topLimit = in.nextInt();
         System.out.println("Digit another number:");
-        int number = in.nextInt();
+        int number = in.nextInt(); **/
         if(topLimit > 40 && topLimit < 100) {
             CreateList(topLimit, number);
         } else {

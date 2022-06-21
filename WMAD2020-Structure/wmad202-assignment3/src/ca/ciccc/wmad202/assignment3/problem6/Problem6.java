@@ -8,21 +8,13 @@ public class Problem6 {
     /**Write a method which receives a list of integers which may contains repeated numbers.
      The method removes the repeated numbers and keeps the distinct numbers. The function
      should return the list of distinct numbers.  */
-    public static void TakeNumbers(){
-        System.out.println("Question6");
-        Scanner scanner = new Scanner(System.in);
+    public static void Test(){
         ArrayList<Integer> numberList = new ArrayList<>();
-        System.out.println("Please enter the number: ");
-        int number1 = scanner.nextInt();
-        numberList.add(number1);
-
-        while(number1 != 0){
-            System.out.println("Please enter the number again (0 : stop): ");
-            number1 = scanner.nextInt();
-            if(number1 != 0){
-                numberList.add(number1);
-            }
-        }
+        numberList.add(1);
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(2);
+        numberList.add(4);
 
         ArrayList<Integer> hashed = new ArrayList<>(new HashSet<>(numberList));
 

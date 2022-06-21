@@ -14,23 +14,23 @@ import ca.ciccc.wmad202.assignment3.problem9.Problem9;
 public class Assignment3Driver {
     public static void run() {
         //Problem1 question1 = new Problem1();
-        //question1.TakeNumber();
+        //question1.Test();
         //Problem2 question2 = new Problem2();
-        //question2.TakeNumber();
+        //question2.Test();
         //Problem3 question3 = new Problem3();
-        //question3.TakeNumber();
-        //Problem4 question4 = new Problem4();
-        //question4.TakeNumbers();
-        Problem5 question5 = new Problem5();
-        question5.TakeNumbers();
+        //question3.Test();
+        // Problem4 question4 = new Problem4();
+        //question4.Test();
+        //Problem5 question5 = new Problem5();
+        //question5.Test();
         //Problem6 question6 = new Problem6();
-        //question6.TakeNumbers();
+        //question6.Test();
         //Problem7 question7 = new Problem7();
-        //question7.TakeNumbers();
+        //question7.Test();
         //Problem8 question8 = new Problem8();
-        //question8.TakeNumber();
-        //Problem9 question9 = new Problem9();
-        //question9.TakeNumbers();
+        //question8.Test();
+        Problem9 question9 = new Problem9();
+        question9.Test();
         //Problem10 question10 = new Problem10();
         //question10.TakeNumbers();
     }

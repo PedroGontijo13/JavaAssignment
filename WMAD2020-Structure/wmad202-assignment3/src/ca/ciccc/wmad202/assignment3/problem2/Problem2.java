@@ -30,7 +30,24 @@ public class Problem2 {
         }
         return result;
     }
+    public static void Test() {
+        callFunction(5);
+        callFunction(7);
+        callFunction(10);
+        callFunction(100);
+        callFunction(121);
+    }
+    public static void callFunction(int n) {
+        if(PrimeNumber(n)) {
+            System.out.println("THE NUMBER IS PRIME!");
+            System.out.println("THE NEXT PRIME NUMBER IS:" + NextPrime(n));
+        } else {
+            System.out.println("THE NUMBER ISNT PRIME!");
+            System.out.println("THE NEXT PRIME NUMBER IS:" + NextPrime(n));
+        }
+    }
     //Take the input number
+    /*
     public static void TakeNumber() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digit one number:");
@@ -42,5 +59,5 @@ public class Problem2 {
             System.out.println("THE NUMBER ISNT PRIME!");
             System.out.println("THE NEXT PRIME NUMBER IS:" + NextPrime(n));
         }
-    }
+    }*/
 }
