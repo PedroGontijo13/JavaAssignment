@@ -9,7 +9,7 @@ public class Problem8 {
      also a positive integer, called number.
      -The method should create and returns list which contains all numbers in range 2 (two) to
      topLimit that are divisible to number.*/
-    public static void CreateList(int topLimit, int number) {
+    public static ArrayList<Integer> CreateList(int topLimit, int number) {
         ArrayList<Integer> arrayL = new ArrayList<Integer>();
         for(int i = 2; i <= topLimit; i++) {
             if(i % number == 0) {
@@ -17,6 +17,7 @@ public class Problem8 {
             }
         }
         System.out.println(arrayL);
+        return arrayL;
     }
     //Take the input number
     public static void TakeNumber() {
