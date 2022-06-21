@@ -1,6 +1,7 @@
 package ca.ciccc.wmad202.assignment3.main;
 
 import ca.ciccc.wmad202.assignment3.problem1.Problem1;
+import ca.ciccc.wmad202.assignment3.problem10.Problem10;
 import ca.ciccc.wmad202.assignment3.problem2.Problem2;
 import ca.ciccc.wmad202.assignment3.problem3.Problem3;
 import ca.ciccc.wmad202.assignment3.problem4.Problem4;
@@ -30,5 +31,7 @@ public class Assignment3Driver {
         //question8.TakeNumber();
         //Problem9 question9 = new Problem9();
         //question9.TakeNumbers();
+        Problem10 question10 = new Problem10();
+        question10.TakeNumbers();
     }
 }
