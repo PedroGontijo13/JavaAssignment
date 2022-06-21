@@ -1,21 +1,25 @@
 package ca.ciccc.assignment4.question1;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Question1 {
-    public static void Test() {
+    public static void test() {
         Scanner in = new Scanner(System.in);
-        ArrayList<Integer> numberList = new ArrayList<>();
+        Set<Integer> numberList = new HashSet<>();
         int num = 1;
+        int total= 0;
         do {
             System.out.println("DIGIT THE NUMBER:");
             num = in.nextInt();
-            if(numberList.contains(num)) {
-                System.out.println("CANT BE A REPETED NUMBER");
-                System.out.println("DIGIT THE NUMBER:");
-                num = in.nextInt();
-            } if(num == 0) {
+            if(num == 0) {
+
+                for (Integer i: numberList){
+                    total += i;
+                }
+                System.out.println("sum of entered number : " + total);
                 break;
             }else {
                 numberList.add(num);
@@ -24,4 +28,5 @@ public class Question1 {
             }
         } while(num != 0);
     }
+
 }
