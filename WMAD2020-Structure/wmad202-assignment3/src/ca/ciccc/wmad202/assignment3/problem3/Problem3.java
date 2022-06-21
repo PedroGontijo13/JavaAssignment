@@ -7,7 +7,7 @@ public class Problem3 {
      parameter and a format (which is either SHAPE1 or SHAPE2 or SHAPE3) as the second
      input parameter and prints the following patterns. */
     public static void doingShape(int number1, String s) {
-        if(s == "SHAPE 2" || s == "shape 2" || s == "SHAPE2" || s == "shape2") {
+        if(s.equals("SHAPE 2") || s.equals("SHAPE2") || s.equals("shape 2") ||s.equals("shape2")) {
             while(number1 >= 0) {
                 for(int i = 1; i <= number1; i++) {
                     System.out.print("*");
@@ -16,8 +16,7 @@ public class Problem3 {
                 System.out.printf("\n");
             }
         }
-        else if(s == "SHAPE 3" || s == "shape 3" || s == "SHAPE3" || s == "shape3") {
-            int controller = 0;
+        else if(s.equals("SHAPE 3") || s.equals("SHAPE3") || s.equals("shape 3") ||s.equals("shape3")) {
             int n = 1;
             while(n <= number1) {
                 for(int i = 1; i <= n; i++) {
@@ -27,7 +26,7 @@ public class Problem3 {
                 System.out.printf("\n");
             }
         }
-        else if(s == "SHAPE 1" || s == "shape 1" || s == "SHAPE1" || s == "shape1") {
+        else if(s.equals("SHAPE 1") || s.equals("SHAPE1") || s.equals("shape 1") ||s.equals("shape1")) {
             for (int i = 0; i<number1; i++ ) {
                 for (int j = 0; j < i; j++){
                     System.out.print(' ');
@@ -43,7 +42,10 @@ public class Problem3 {
     public static void TakeNumber() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digit one number:");
-        //int n = in.nextInt();
-        doingShape(5, "SHAPE 1");
+        int n = in.nextInt();
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter the SHAPE:");
+        String format = myObj.nextLine();
+        doingShape(n, format);
     }
 }

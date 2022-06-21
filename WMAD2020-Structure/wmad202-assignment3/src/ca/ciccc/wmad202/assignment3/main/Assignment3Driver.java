@@ -17,8 +17,8 @@ public class Assignment3Driver {
         //question1.TakeNumber();
         //Problem2 question2 = new Problem2();
         //question2.TakeNumber();
-        //Problem3 question3 = new Problem3();
-        //question3.TakeNumber();
+        Problem3 question3 = new Problem3();
+        question3.TakeNumber();
         //Problem4 question4 = new Problem4();
         //question4.TakeNumbers();
         //Problem5 question5 = new Problem5();
@@ -31,7 +31,7 @@ public class Assignment3Driver {
         //question8.TakeNumber();
         //Problem9 question9 = new Problem9();
         //question9.TakeNumbers();
-        Problem10 question10 = new Problem10();
-        question10.TakeNumbers();
+        //Problem10 question10 = new Problem10();
+        //question10.TakeNumbers();
     }
 }
