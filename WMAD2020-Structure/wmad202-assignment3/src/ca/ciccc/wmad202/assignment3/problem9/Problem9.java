@@ -6,22 +6,13 @@ import java.util.Scanner;
 public class Problem9 {
     public static void Test() {
         ArrayList<Integer> numberList = new ArrayList<>();
-        
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the number: ");
-        int number1 = scanner.nextInt();
-        numberList.add(number1);
 
-        while (number1 != 0) {
-            System.out.println("Please enter the number again (0 : stop): ");
-            number1 = scanner.nextInt();
-            if (number1 != 0) {
-                numberList.add(number1);
-            }
-        }
+        numberList.add(1);
+        numberList.add(7);
+        numberList.add(11);
+        numberList.add(12);
 
-        System.out.println("Please enter the index: ");
-        int indexNum = scanner.nextInt();
+        int indexNum = 4;
         System.out.println("Index:" + primeVisibility(numberList, indexNum));
     }
 
