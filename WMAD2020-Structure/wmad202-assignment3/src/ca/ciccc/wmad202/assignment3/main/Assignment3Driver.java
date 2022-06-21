@@ -17,12 +17,12 @@ public class Assignment3Driver {
         //question1.TakeNumber();
         //Problem2 question2 = new Problem2();
         //question2.TakeNumber();
-        Problem3 question3 = new Problem3();
-        question3.TakeNumber();
+        //Problem3 question3 = new Problem3();
+        //question3.TakeNumber();
         //Problem4 question4 = new Problem4();
         //question4.TakeNumbers();
-        //Problem5 question5 = new Problem5();
-        //question5.TakeNumbers();
+        Problem5 question5 = new Problem5();
+        question5.TakeNumbers();
         //Problem6 question6 = new Problem6();
         //question6.TakeNumbers();
         //Problem7 question7 = new Problem7();
