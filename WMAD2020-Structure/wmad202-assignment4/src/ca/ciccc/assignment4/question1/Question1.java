@@ -1,12 +1,15 @@
 package ca.ciccc.assignment4.question1;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class Question1 {
-    public static void test() {
+
+    public void invoke(){
+        askNumber();
+    }
+    public void askNumber() {
         Scanner in = new Scanner(System.in);
         Set<Integer> numberList = new HashSet<>();
         int num = 1;
@@ -15,7 +18,6 @@ public class Question1 {
             System.out.println("DIGIT THE NUMBER:");
             num = in.nextInt();
             if(num == 0) {
-
                 for (Integer i: numberList){
                     total += i;
                 }
@@ -28,5 +30,4 @@ public class Question1 {
             }
         } while(num != 0);
     }
-
 }
