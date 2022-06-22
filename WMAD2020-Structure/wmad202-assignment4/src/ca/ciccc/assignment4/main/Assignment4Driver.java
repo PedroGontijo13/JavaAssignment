@@ -10,6 +10,7 @@ import ca.ciccc.assignment4.question6.Question6;
 import java.util.Scanner;
 
 public class Assignment4Driver {
+
     public static void run() {
         boolean stop = true;
 
