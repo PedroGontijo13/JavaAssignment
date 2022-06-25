@@ -10,7 +10,8 @@ public class Question2 {
         //TestProblem2_4();
         //TestProblem2_5();
         //TestProblem2_6();
-        TestProblem2_7();
+        //TestProblem2_7();
+        TestProblem2_8();
     }
 
     public void TestProblem2_1() {
@@ -67,13 +68,18 @@ public class Question2 {
 
     public void TestProblem2_7() {
         MultiplyChoice mc = new MultiplyChoice();
-        mc.giveChoices();
-        mc.checkChoice("A");;
-        mc.giveChoices();
-        mc.checkChoice("B");;
-        mc.giveChoices();
-        mc.checkChoice("C");;
-        mc.giveChoices();
-        mc.checkChoice("D");
+        mc.ShowQuestion("WITCH IS ANIMAL WHO STAY IN WATHER?");
+        mc.giveChoices("CAT", "COW", "FISH", "DOG");
+        mc.checkChoice("c", "b");
+        mc.checkChoice("c", "c");
+        mc.checkChoice("c", "d");
+        mc.checkChoice("c", "a");
+        mc.ShowTheAnwser("c");
+    }
+
+    public void TestProblem2_8() {
+        Student s = new Student("WITCH IS ANIMAL WHO STAY IN WATHER?", "Fish");
+        s.ask();
+        s.printAnswer();
     }
 }
