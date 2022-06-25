@@ -18,9 +18,11 @@ public class Question2 {
     }
 
     public void TestProblem2_2() {
-        Pages pages = new Pages("LOREM");
+        Pages pages = new Pages("LOREM LOREM");
         Book book = new Book();
         book.addPage(pages);
+        Pages pages1 = new Pages("LOREM LOREM");
+        book.addPage(pages1);
         book.CheckWords("LOREM");
     }
 }
