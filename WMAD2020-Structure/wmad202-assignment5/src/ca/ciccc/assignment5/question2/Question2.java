@@ -1,12 +1,16 @@
 package ca.ciccc.assignment5.question2;
 
+import java.util.Scanner;
+
 public class Question2 {
     public void invoke(){
         //TestProblem2_1();
         //TestProblem2_2();
         //TestProblem2_3();
         //TestProblem2_4();
-        TestProblem2_5();
+        //TestProblem2_5();
+        //TestProblem2_6();
+        TestProblem2_7();
     }
 
     public void TestProblem2_1() {
@@ -54,5 +58,22 @@ public class Question2 {
         c3.Operation();
         Calculator c4 = new Calculator(6, 2, "/");
         c4.Operation();
+    }
+
+    public void TestProblem2_6() {
+        Phone p = new Phone();
+        p.CreateAlarmTime();
+    }
+
+    public void TestProblem2_7() {
+        MultiplyChoice mc = new MultiplyChoice();
+        mc.giveChoices();
+        mc.checkChoice("A");;
+        mc.giveChoices();
+        mc.checkChoice("B");;
+        mc.giveChoices();
+        mc.checkChoice("C");;
+        mc.giveChoices();
+        mc.checkChoice("D");
     }
 }
