@@ -6,16 +6,25 @@ public class Question3 {
     private final static String EQUATION_FACTOR = "x";
 
     public void invoke() {
-        //System.out.println("5*x^4 and 5*x^4:");
-        //System.out.println(checkSingleFactorEquality("5*x^4", "5*x^4"));
-        //System.out.println(checkMultiFactorPolynomialsEquality("5*x^4", "5*x^4"));
-        //System.out.println("6*x^9 and 8*x^4:");
-        //System.out.println(checkSingleFactorEquality("6*x^9", "8*x^4"));
-        //System.out.println(checkMultiFactorPolynomialsEquality("6*x^9", "8*x^4"));
-        //System.out.println("6*x^45 and 5*x^4:");
-        //System.out.println(checkSingleFactorEquality("6*x^45", "5*x^4"));
-        //System.out.println(checkMultiFactorPolynomialsEquality("6*x^45", "5*x^4"));
+        System.out.println("CHECK 5*x^4 and 5*x^4:");
+        System.out.println(checkSingleFactorEquality("5*x^4", "5*x^4"));
+        System.out.println(checkMultiFactorPolynomialsEquality("5*x^4", "5*x^4"));
+        System.out.println("CHECK 6*x^9 and 8*x^4:");
+        System.out.println(checkSingleFactorEquality("6*x^9", "8*x^4"));
+        System.out.println(checkMultiFactorPolynomialsEquality("6*x^9", "8*x^4"));
+        System.out.println("CHECK 6*x^45 and 5*x^4:");
+        System.out.println(checkSingleFactorEquality("6*x^45", "5*x^4"));
+        System.out.println(checkMultiFactorPolynomialsEquality("6*x^45", "5*x^4"));
+        System.out.println("CHECK THE BIGGEST EXPONENT: 10*x^5 + 8*x^4 + x^2 + 6:");
         System.out.println(biggestExponent(" 10*x^5 + 8*x^4 + x^2 + 6 "));
+        System.out.println("ADD 2 POLYNOMIALEQUATIONS: 10*x^5 + 8*x^4 + x^2 + 6 and 9*x^6 + 8*x^4 + x^2 + 6 :");
+        System.out.println(addTwoFunctios("10*x^5 + 8*x^4 + x^2 + 6", "9*x^6 + 8*x^4 + x^2 + 6"));
+    }
+
+    public static String addTwoFunctios(String PolynomialEquations1,String PolynomialEquations2) {
+        String PolynomialEquation = PolynomialEquations1.concat("+");
+        PolynomialEquation = PolynomialEquation.concat(PolynomialEquations2);
+        return PolynomialEquation;
     }
 
     public static boolean checkMultiFactorPolynomialsEquality(String multiPolynomialFactor1,String multiPolynomialFactor2) {
