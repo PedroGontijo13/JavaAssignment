@@ -1,42 +1,54 @@
-package ca.ciccc.wmad202.assignment3.problem10;
+package ca.ciccc.assignment5.question3;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Problem10 {
+public class Question3 {
     private final static String EQUATION_FACTOR = "x";
 
     public void invoke() {
-        System.out.println("5*x^4 and 5*x^4:");
-        System.out.println(checkSingleFactorEquality("5*x^4", "5*x^4"));
-        System.out.println(checkMultiFactorPolynomialsEquality("5*x^4", "5*x^4"));
-        System.out.println("6*x^9 and 8*x^4:");
-        System.out.println(checkSingleFactorEquality("6*x^9", "8*x^4"));
-        System.out.println(checkMultiFactorPolynomialsEquality("6*x^9", "8*x^4"));
-        System.out.println("6*x^45 and 5*x^4:");
-        System.out.println(checkSingleFactorEquality("6*x^45", "5*x^4"));
-        System.out.println(checkMultiFactorPolynomialsEquality("6*x^45", "5*x^4"));
+        //System.out.println("5*x^4 and 5*x^4:");
+        //System.out.println(checkSingleFactorEquality("5*x^4", "5*x^4"));
+        //System.out.println(checkMultiFactorPolynomialsEquality("5*x^4", "5*x^4"));
+        //System.out.println("6*x^9 and 8*x^4:");
+        //System.out.println(checkSingleFactorEquality("6*x^9", "8*x^4"));
+        //System.out.println(checkMultiFactorPolynomialsEquality("6*x^9", "8*x^4"));
+        //System.out.println("6*x^45 and 5*x^4:");
+        //System.out.println(checkSingleFactorEquality("6*x^45", "5*x^4"));
+        //System.out.println(checkMultiFactorPolynomialsEquality("6*x^45", "5*x^4"));
+        System.out.println(biggestExponent(" 10*x^5 + 8*x^4 + x^2 + 6 "));
     }
 
     public static boolean checkMultiFactorPolynomialsEquality(String multiPolynomialFactor1,String multiPolynomialFactor2) {
         ArrayList<Integer[]> PolynomialFactor1Array = convertSinglePolynomialFactorToArray(multiPolynomialFactor1);
         ArrayList<Integer[]> PolynomialFactor2Array = convertSinglePolynomialFactorToArray(multiPolynomialFactor2);
 
-        if(PolynomialFactor1Array.size() != PolynomialFactor2Array.size()) {
+        if(multiPolynomialFactor1.length() != multiPolynomialFactor2.length()) {
             return false;
         } else {
             for(int i = 0; i < PolynomialFactor1Array.size(); i++) {
                 Integer[] SingleFactor1 = PolynomialFactor1Array.get(i);
                 Integer[] SingleFactor2 = PolynomialFactor2Array.get(i);
 
-                if(SingleFactor1[0] != SingleFactor2[0] || SingleFactor1[1] != SingleFactor2[1]) {
-                    break;
+                if(SingleFactor1[i] != SingleFactor2[i]) {
+                    return false;
                 }
-                return false;
             }
         }
-
         return true;
+    }
+
+    public static Integer biggestExponent(String polynomialEquation) {
+        int degree = 0;
+        int TotalDegree = 0;
+        for(int i = 0; i < polynomialEquation.length(); i++) {
+            if(polynomialEquation.charAt(i) == '^') {
+                degree = Integer.parseInt(String.valueOf(polynomialEquation.charAt(i + 1)));
+                if(TotalDegree < degree) {
+                    TotalDegree = degree;
+                }
+            }
+        }
+        return TotalDegree;
     }
 
     public static ArrayList<Integer[]> convertSinglePolynomialFactorToArray(String polynomialFactor) {
@@ -86,5 +98,4 @@ public class Problem10 {
 
         return singlePolynomialFactorComponents;
     }
-
 }

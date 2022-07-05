@@ -1,75 +1,45 @@
 package ca.ciccc.assignment4.question5;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Question5 {
-    
     public void invoke() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter numbers which are 3D coordination system (space)");
+        ArrayList<HashMap<Character, Integer>> points = new ArrayList<>();
+        points.add(getPoint(1,2,4));
+        points.add(getPoint(1,2,3));
+        points.add(getPoint(1,4,4));
 
-        System.out.println("X1 : ");
-        int x = scanner.nextInt();
-        System.out.println("Y1 : ");
-        int y = scanner.nextInt();
-        System.out.println("Z1 : ");
-        int z = scanner.nextInt();
-
-        System.out.println("X2 : ");
-        int x2 = scanner.nextInt();
-        System.out.println("Y2 : ");
-        int y2 = scanner.nextInt();
-        System.out.println("Z2 : ");
-        int z2 = scanner.nextInt();
-
-        Map<String,Integer> point1= new HashMap<>();
-        Map<String,Integer> point2= new HashMap<>();
-        List<Map<String,Integer>> points = new ArrayList<>();
-        point1.put("x",x);
-        point1.put("y",y);
-        point1.put("z",z);
-
-        point2.put("x",x2);
-        point2.put("y",y2);
-        point2.put("z",z2);
-        points.add(point1);
-        points.add(point2);
-
-        Map<String,Long> result = distancePoint(points);
-
-        for (String s: result.keySet()){
-            for (Long l: result.values()){
-                System.out.println(s + " " + l);
+        HashMap<Character, Integer> closesPoints = points.get(0);
+        double minDistance = getDistance(points.get(0), getCenterPoint());
+        for(int i = 0; i < points.size(); i++) {
+            double distance = getDistance(points.get(i), getCenterPoint());
+            if(distance < minDistance) {
+                minDistance = distance;
             }
         }
+        System.out.println("The closest points is: ");
+        System.out.println(closesPoints);
     }
-
-    public Map<String,Long> distancePoint(List<Map<String,Integer>> points) {
-        int x1= 0; int x2 = 0;
-        int y1= 0; int y2 = 0;
-        int z1= 0; int z2 = 0;
-
-        for (int i = 0; i< points.size(); i++) {
-                if (i == 0) {
-                    x1 = points.get(i).get("x");
-                    y1 = points.get(i).get("y");
-                    z1 = points.get(i).get("z");
-                }else if (i == 1){
-                    x2 = points.get(i).get("x");
-                    y2 = points.get(i).get("y");
-                    z2 = points.get(i).get("z");
-                }
-        }
-
-        long distanceOfBtwPoints = Math.round(Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2) + Math.pow((z1-z2),2)));
-        long distanceOfCenterPoint1 = Math.round(Math.sqrt(Math.pow((x1-0),2) + Math.pow((y1-0),2) + Math.pow((z1-0),2)));
-        long distanceOfCenterPoint2 = Math.round(Math.sqrt(Math.pow((x2-0),2) + Math.pow((y2-0),2) + Math.pow((z2-0),2)));
-
-        Map<String, Long> result = new HashMap<>();
-        result.put("distance Of Btw Points",distanceOfBtwPoints);
-        result.put("distance to Center Point1",distanceOfCenterPoint1);
-        result.put("distance to Center Point2",distanceOfCenterPoint2);
-
-        return result;
+    public HashMap<Character, Integer> getCenterPoint() {
+        HashMap<Character, Integer> center = new HashMap<>();
+        center.put('x', 0);
+        center.put('y', 0);
+        center.put('z', 0);
+        return center;
+    }
+    public double getDistance(HashMap<Character, Integer> p1, HashMap<Character, Integer> p2) {
+        double sqrt;
+        sqrt = Math.sqrt(
+                Math.pow(p1.get('x') - p2.get('x'), 2) + Math.pow(p1.get('y') - p2.get('y'), 2) + Math.pow(p1.get('z') - p1.get('z'), 2)
+        );
+        return sqrt;
+    }
+    public HashMap<Character, Integer> getPoint(int x, int y, int z) {
+        HashMap<Character, Integer> point = new HashMap<>();
+        point.put('x', x);
+        point.put('y', y);
+        point.put('z', z);
+        return point;
     }
 }
