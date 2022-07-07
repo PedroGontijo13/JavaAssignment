@@ -31,7 +31,7 @@ public class Student {
         this.name = name;
     }
 
-    public Integer getGpa(Student s) {
+    public double getGpa(Student s) {
         int sum = 0;
         for(int i = 0; i < s.GradeList.size(); i++) {
             sum += s.GradeList.get(i);
@@ -63,8 +63,8 @@ public class Student {
     }
 
     public int CompareGpa(Student s1, Student s2) {
-        int value1 = getGpa(s1);
-        int value2 = getGpa(s2);
+        double value1 = getGpa(s1);
+        double value2 = getGpa(s2);
 
         if(value1 > value2) {
             return 1;

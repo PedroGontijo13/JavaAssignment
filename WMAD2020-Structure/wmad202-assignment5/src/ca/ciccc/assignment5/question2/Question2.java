@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Question2 {
     public void invoke(){
         //TestProblem2_1();
-        //TestProblem2_2();
+        TestProblem2_2();
         //TestProblem2_3();
         //TestProblem2_4();
         //TestProblem2_5();
         //TestProblem2_6();
         //TestProblem2_7();
-        TestProblem2_8();
+        //TestProblem2_8();
     }
 
     public void TestProblem2_1() {

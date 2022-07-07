@@ -23,5 +23,8 @@ public class Test {
         } else {
             System.out.println("THE SECOND ONE IS BIGGER");
         }
+
+        s1.ShowStudent(s1);
+        s2.ShowStudent(s2);
     }
 }

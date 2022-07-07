@@ -23,8 +23,7 @@ public class Invoice {
     public void showList() {
         for(int i = 0; i < ProductList.size(); i++) {
             Product p = ProductList.get(i);
-            System.out.println(p.name);
-            System.out.println(p.price);
+            p.getProduct(p);
         }
     }
 }
