@@ -6,7 +6,7 @@ public class Food extends Product {
     private Integer foodCalorie;
     private Integer foodSize;
     private ArrayList<String> foodIngredients;
-    Food(Integer FoodId, String FoodName, Float FoodPrice, String FoodMadeInCountry, Integer foodCalorie, Integer foodSize, ArrayList<String> foodIngredients) {
+    public Food(Integer FoodId, String FoodName, Float FoodPrice, String FoodMadeInCountry, Integer foodCalorie, Integer foodSize, String[] strings) {
         super(FoodId, FoodName, FoodPrice, FoodMadeInCountry);
         this.foodCalorie = foodCalorie;
         this.foodSize = foodSize;
