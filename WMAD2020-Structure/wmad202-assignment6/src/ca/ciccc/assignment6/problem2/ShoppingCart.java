@@ -5,7 +5,8 @@ import ca.ciccc.assignment6.problem1.*;
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    ArrayList<Product> ShipingCart = new ArrayList<>();
+    public Float totalPrice;
+    public ArrayList<Product> ShipingCart = new ArrayList<>();
     public void buy() {
         Drink drink = new Drink(412, "Pepsi", 2F, "USA", false, 150);
         Drink drink1 = new Drink(183, "Ginger Zero", 8F,"CA", true, 200);
@@ -18,13 +19,35 @@ public class ShoppingCart {
         materials.add(material1);
         Cloth cloth = new Cloth(701, "T-Shirt", 15F, "China", materials);
         ShipingCart.add(drink);
+        displayProduct(drink);
         ShipingCart.add(drink1);
+        displayProduct(drink1);
         ShipingCart.add(food);
+        displayProduct(food);
         ShipingCart.add(food);
+        displayProduct(food);
         ShipingCart.add(food2);
+        displayProduct(food2);
         ShipingCart.add(food2);
+        displayProduct(food2);
         ShipingCart.add(cloth);
+        displayProduct(cloth);
+        setShipingCart(ShipingCart);
+        setTotalPrice(getPrice(ShipingCart));
         System.out.println(getPrice(ShipingCart));
+    }
+
+    public void displayProduct(Product p) {
+        System.out.println(p.getProductName());
+        System.out.println(p.getPoductPrice());
+    }
+
+    public void setShipingCart(ArrayList<Product> shipingCart) {
+        ShipingCart = shipingCart;
+    }
+
+    public void setTotalPrice(Float TotalPrice) {
+        totalPrice = TotalPrice;
     }
 
     public Float getPrice(ArrayList<Product> shoppingCart) {

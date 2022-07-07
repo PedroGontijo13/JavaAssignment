@@ -12,7 +12,9 @@ public class Product extends Object {
         this.PoductPrice = ProductPrice;
         this.ProductMadeInCountry = ProductMadeInCountry;
     }
-
+    public String getProductName() {
+        return this.ProductName;
+    }
     public Float getPoductPrice(){
         return this.PoductPrice;
     }
