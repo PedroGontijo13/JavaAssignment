@@ -19,21 +19,29 @@ public class ShoppingCart {
         materials.add(material1);
         Cloth cloth = new Cloth(701, "T-Shirt", 15F, "China", materials);
         ShipingCart.add(drink);
+        System.out.println("Product: ");
         displayProduct(drink);
         ShipingCart.add(drink1);
+        System.out.println("Product: ");
         displayProduct(drink1);
         ShipingCart.add(food);
+        System.out.println("Product: ");
         displayProduct(food);
         ShipingCart.add(food);
+        System.out.println("Product: ");
         displayProduct(food);
         ShipingCart.add(food2);
+        System.out.println("Product: ");
         displayProduct(food2);
         ShipingCart.add(food2);
+        System.out.println("Product: ");
         displayProduct(food2);
         ShipingCart.add(cloth);
+        System.out.println("Product: ");
         displayProduct(cloth);
         setShipingCart(ShipingCart);
         setTotalPrice(getPrice(ShipingCart));
+        System.out.println("Total price: ");
         System.out.println(getPrice(ShipingCart));
     }
 
