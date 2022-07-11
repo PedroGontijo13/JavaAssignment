@@ -4,7 +4,7 @@ import ca.ciccc.assignment6.problem1.*;
 
 import java.util.ArrayList;
 
-public class ShoppingCart {
+public class ShoppingCart implements InterfaceShoppingCart {
     public Float totalPrice;
     public ArrayList<Product> ShipingCart = new ArrayList<>();
     public void buy() {
@@ -45,19 +45,23 @@ public class ShoppingCart {
         System.out.println(getPrice(ShipingCart));
     }
 
+    @Override
     public void displayProduct(Product p) {
         System.out.println(p.getProductName());
         System.out.println(p.getPoductPrice());
     }
 
+    @Override
     public void setShipingCart(ArrayList<Product> shipingCart) {
         ShipingCart = shipingCart;
     }
 
+    @Override
     public void setTotalPrice(Float TotalPrice) {
         totalPrice = TotalPrice;
     }
 
+    @Override
     public Float getPrice(ArrayList<Product> shoppingCart) {
         Float total = 0F;
         for (Product p: ShipingCart) {
