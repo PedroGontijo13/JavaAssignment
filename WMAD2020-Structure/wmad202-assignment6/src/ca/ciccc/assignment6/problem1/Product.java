@@ -6,16 +6,45 @@ public class Product extends Object {
     private Float PoductPrice;
     private String ProductMadeInCountry;
 
-    Product(Integer ProductId, String ProductName, Float ProductPrice, String ProductMadeInCountry) {
-        this.ProductId = ProductId;
-        this.ProductName = ProductName;
-        this.PoductPrice = ProductPrice;
-        this.ProductMadeInCountry = ProductMadeInCountry;
+    public Product(Integer Id, String Name, Float Price, String MadeInCountry) {
+        this.ProductId = Id;
+        this.ProductName = Name;
+        this.PoductPrice = Price;
+        this.ProductMadeInCountry = MadeInCountry;
     }
-    public String getProductName() {
-        return this.ProductName;
+
+    public Product() {
     }
-    public Float getPoductPrice(){
-        return this.PoductPrice;
+
+    public Integer getId() {
+        return ProductId;
+    }
+
+    public void setId(Integer id) {
+        this.ProductId = id;
+    }
+
+    public String getName() {
+        return ProductName;
+    }
+
+    public void setName(String name) {
+        this.ProductName = name;
+    }
+
+    public Float getPrice() {
+        return PoductPrice;
+    }
+
+    public void setPrice(Float price) {
+        this.PoductPrice = price;
+    }
+
+    public String getMadeInCountry() {
+        return ProductMadeInCountry;
+    }
+
+    public void setMadeInCountry(String madeInCountry) {
+        this.ProductMadeInCountry = madeInCountry;
     }
 }

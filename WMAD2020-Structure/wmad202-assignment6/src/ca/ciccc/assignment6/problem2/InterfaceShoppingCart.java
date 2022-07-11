@@ -6,9 +6,11 @@ import java.util.ArrayList;
 
 public interface InterfaceShoppingCart {
 
-    void displayProduct(Product p);
+    Integer addItem(Product product);
 
-    void setShipingCart(ArrayList<Product> shipingCart);
+    void displayProduct();
+
+    void setShippingCart(ArrayList<Product> shippingCart);
 
     void setTotalPrice(Float TotalPrice);
 
