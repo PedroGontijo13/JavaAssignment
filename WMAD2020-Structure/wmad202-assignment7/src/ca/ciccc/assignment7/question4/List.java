@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class List<T> {
     private T t;
     private ArrayList<T> ListA;
+    public ArrayList<T> getArray() {
+        return ListA;
+    }
     public void addToList(T obj) {
         ListA.add(obj);
     }
