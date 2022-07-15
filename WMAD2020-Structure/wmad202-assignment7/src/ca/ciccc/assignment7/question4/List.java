@@ -1,5 +1,7 @@
 package ca.ciccc.assignment7.question4;
 
+import ca.ciccc.assignment7.question1.Index;
+
 import java.util.ArrayList;
 
 public class List<T> {
@@ -8,6 +10,7 @@ public class List<T> {
     public ArrayList<T> getArray() {
         return ListA;
     }
+
     public void addToList(T obj) {
         ListA.add(obj);
     }
@@ -24,6 +27,8 @@ public class List<T> {
             if(ListA.get(i) == operator) {
                 al.add(ListA.get(i));
                 System.out.println(operator);
+            } else {
+                return null;
             }
         }
         return (T) al;
