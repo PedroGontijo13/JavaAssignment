@@ -1,22 +1,37 @@
 package ca.ciccc.assignment7.main;
 
-import ca.ciccc.assignment7.question1.Question1;
-import ca.ciccc.assignment7.question2.Question2;
-import ca.ciccc.assignment7.question3.Question3;
-import ca.ciccc.assignment7.question4.Question4;
-import ca.ciccc.assignment7.question5.Question5;
+import ca.ciccc.assignment7.problem1.Test;
+import ca.ciccc.assignment7.problem2.IsCompile;
+import ca.ciccc.assignment7.problem3.Problem;
+import ca.ciccc.assignment7.problem4.Test4;
+import ca.ciccc.assignment7.problem5.Test5;
 
 public class Assignment7Driver {
     public static void run() {
-        //Question1 question1 = new Question1();
-        //question1.invoke();
-        //Question2 question2 = new Question2();
-        //question2.Invoke();
-        Question3 question3 = new Question3();
-        question3.invoke();
-        //Question4 question4 = new Question4();
-        //question4.invoke();
-        //Question5 question5 = new Question5();
-        //question5.Invoke();
+        //problem1
+        Test test = new Test();
+        test.invoke();
+
+        //problem2
+        IsCompile isCompile = new IsCompile();
+        isCompile.answer();
+
+        //problem3
+        Problem problem = new Problem();
+        String[] a = {"a", "b"};
+        problem.exchangeElements(a, 1, 1);
+
+        //problem4
+        Test4 test4 = new Test4();
+        test4.main();
+
+        //problem5
+        Test5 test5 = new Test5();
+        try {
+            test5.invoke();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }
