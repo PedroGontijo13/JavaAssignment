@@ -23,7 +23,7 @@ public class AplicationDriver {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main() {
         invoke();
     }
 

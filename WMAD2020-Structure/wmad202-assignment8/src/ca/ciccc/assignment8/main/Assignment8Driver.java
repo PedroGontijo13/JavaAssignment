@@ -12,5 +12,9 @@ public class Assignment8Driver {
         ap.invoke();
         AplicationDriver ap2 = new AplicationDriver();
         ap2.invoke();
+        AplicationDriver ap3 = new AplicationDriver();
+        ap3.invoke();
+        ca.ciccc.assignment8.question4.ApplicationDriver ap4 = new ca.ciccc.assignment8.question4.ApplicationDriver();
+        ap3.main();
     }
 }
