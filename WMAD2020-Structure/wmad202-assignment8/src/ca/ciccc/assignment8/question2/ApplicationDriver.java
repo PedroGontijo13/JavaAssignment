@@ -27,7 +27,7 @@ public class ApplicationDriver {
 
         System.out.println("S1's perimeter is: " + s1.perimeter());
         System.out.println("S1's area is: " + s1.area());
-    /*
+
         int[] slSides2 = {10, 10};
         Shape s2 = new Shape(ShapeType.Square, slSides2) {
 
@@ -80,6 +80,6 @@ public class ApplicationDriver {
         };
 
         System.out.println("S4's perimeter is: " + s4.perimeter());
-        System.out.println("S4's area is: " + s4.area()); */
+        System.out.println("S4's area is: " + s4.area());
     }
 }
