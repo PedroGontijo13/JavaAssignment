@@ -1,7 +1,7 @@
 package ca.ciccc.assignment8.question2;
 
 public class ApplicationDriver {
-    enum ShapeType{
+    public enum ShapeType{
         Rectangle,
         Triangle,
         Circle,
@@ -9,36 +9,36 @@ public class ApplicationDriver {
         Custom
     }
 
-    public static void main(String[] args) {
+    public static void invoke() {
         int[] slSides = {10, 20};
         Shape s1 = new Shape(ShapeType.Rectangle, slSides) {
 
             //complete the implementation of the anonymous inner class here
             @Override
-            float perimeter() {
+            public float perimeter() {
                 return (slSides[1] + slSides[0]) * 2;
             }
 
             @Override
-            float area() {
+            public float area() {
                 return slSides[0] * slSides[1];
             }
         };
 
         System.out.println("S1's perimeter is: " + s1.perimeter());
         System.out.println("S1's area is: " + s1.area());
-
+    /*
         int[] slSides2 = {10, 10};
         Shape s2 = new Shape(ShapeType.Square, slSides2) {
 
             //complete the implementation of the anonymous inner class here
             @Override
-            float perimeter() {
+            public float perimeter() {
                 return (slSides2[1] * 2) + (slSides2[0] * 2);
             }
 
             @Override
-            float area() {
+            public float area() {
                 return slSides2[0] * slSides2[1];
             }
         };
@@ -51,12 +51,12 @@ public class ApplicationDriver {
 
             //complete the implementation of the anonymous inner class here
             @Override
-            float perimeter() {
+            public float perimeter() {
                 return (float) (2 * Math.PI * slSides3[0]);
             }
 
             @Override
-            float area() {
+            public float area() {
                 return (float) (Math.PI * slSides3[0] * slSides3[1]);
             }
         };
@@ -69,17 +69,17 @@ public class ApplicationDriver {
 
             //complete the implementation of the anonymous inner class here
             @Override
-            float perimeter() {
+            public float perimeter() {
                 return (slSides4[0] + slSides4[1] + slSides4[2]);
             }
 
             @Override
-            float area() {
+            public float area() {
                 return (slSides4[0] * slSides4[1]) / 2;
             }
         };
 
         System.out.println("S4's perimeter is: " + s4.perimeter());
-        System.out.println("S4's area is: " + s4.area());
+        System.out.println("S4's area is: " + s4.area()); */
     }
 }
