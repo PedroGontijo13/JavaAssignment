@@ -84,7 +84,7 @@ public class TestExceptions {
             }
 
         }
-        
+
         public void main(){
             TestExceptions test = new TestExceptions();
             test.testExceptions1();
